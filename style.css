@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.index-page {background-image: url('img/qe.jpg');
+}
+.products-page { background-image: url('img/sg.jpg');
+   }
+   .about-item img {
+    max-width: 400px; /* Set the maximum width to 80% of the container */
+    height: 400px; /* Maintain aspect ratio */
+    border-radius: 4px;
+}
+.services-page { background-image: url('img/green.jpg');}
+.about-page { background-image: url('img/green.jpg');}
+.contact-page { background-image: url('img/green.jpg');}
+
+
+
+
+
+header {
+    background-color: #379a3a;
+    color: rgb(241, 245, 245);
+    padding: 10px 0;
+    text-align: center;
+    font-style: bold;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline-block; /* Use inline-block for better spacing */
+    margin: 0 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: rgb(3, 29, 29); /* Change text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+    font-size: 18px; /* Increase font size */
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 4px; /* Optional: rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #7510c2; /* Change text color on hover */
+    text-transform: uppercase; /* Make text uppercase on hover */
+}
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form */
+    
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin: 10px 0 5px; /* Add some margin for spacing */
+    color: rgb(243, 232, 232); /* Change label text color to navy blue */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%; /* Make input fields take full width */
+    padding: 10px; /* Add some padding for better appearance */
+    border: 1px solid #e6d6d6; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background-color: #1a9b1e; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+#logoutButton {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between products */
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px; /* Set a specific width */
+    height: 300px; /* Set a specific height */
+    text-align: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 150px; /* Limit image height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #379a3a;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

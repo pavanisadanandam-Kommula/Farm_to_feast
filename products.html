@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Organic Connect</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #2E7D32;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .add-to-cart:hover {
+            background-color: #388E3C;
+        }
+
+        footer {
+            background: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Organic Connect</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2 style="text-align:center;">Our Products</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6" alt="Apple">
+            <h3>Apple</h3>
+            <p>Price: ₹75</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1603833665858-e61d17a86224" alt="Banana">
+            <h3>Banana</h3>
+            <p>Price: ₹40</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1447175008436-054170c2e979" alt="Carrot">
+            <h3>Carrot</h3>
+            <p>Price: ₹30</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337" alt="Tomato">
+            <h3>Tomato</h3>
+            <p>Price: ₹60</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469" alt="Onion">
+            <h3>Onion</h3>
+            <p>Price: ₹50</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" alt="Orange">
+            <h3>Orange</h3>
+            <p>Price: ₹70</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f" alt="Grapes">
+            <h3>Grapes</h3>
+            <p>Price: ₹150</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1563114773-84221bd62daa" alt="Watermelon">
+            <h3>Watermelon</h3>
+            <p>Price: ₹20</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <!-- NEW PRODUCTS ADDED -->
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c" alt="Rice">
+            <h3>Rice</h3>
+            <p>Price: ₹55 / kg</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1518977956812-cd3dbadaaf31" alt="Potato">
+            <h3>Potato</h3>
+            <p>Price: ₹35</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1553279768-865429fa0078" alt="Mango">
+            <h3>Mango</h3>
+            <p>Price: ₹120</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1598514982841-84b68c60e3a9" alt="Brinjal">
+            <h3>Brinjal</h3>
+            <p>Price: ₹45</p>
+            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Organic Connect</p>
+    <p>Contact us: 7856346789</p>
+    <h3>FOUNDERS</h3>
+    <p>Chithirai Soniya Selin</p>
+    <p>Kommula Pavani</p>
+    <p>Guntuka Sanjana</p>
+    
+</footer>
+<script>
+function addToCart() {
+    alert("Item added to cart!");
+    window.location.href = "my-cart.html";
+}
+</script>
+
+</body>
+</html>

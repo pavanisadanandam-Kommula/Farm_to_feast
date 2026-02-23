@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Organic Connect</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .cart-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .checkout-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-container" id="cartItems">
+        <!-- Cart items will be displayed here -->
+        <p>Your cart is currently empty.</p>
+    </div>
+    <div class="total" id="totalPrice"></div>
+    <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+
+    <script>
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cartItems');
+            const totalPriceContainer = document.getElementById('totalPrice');
+
+            // Clear the container
+            cartItemsContainer.innerHTML = '';
+
+            if (cartItems.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is currently empty.</p>';
+                totalPriceContainer.innerHTML = '';
+            } else {
+                let totalPrice = 0;
+
+                cartItems.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.classList.add('cart-item');
+                    itemElement.innerHTML = `<span>${item.name}</span><span>₹${item.price.toFixed(2)}</span>`;
+                    cartItemsContainer.appendChild(itemElement);
+                    totalPrice += item.price;
+                });
+
+                totalPriceContainer.innerHTML = `Total: ₹${totalPrice.toFixed(2)}`;
+            }
+        }
+
+        function checkout() {
+            // Implement checkout logic here
+            alert('Proceeding to checkout...');
+            // You can redirect to a checkout page or perform other actions
+        }
+
+        // Call the function to display items when the page loads
+        document.addEventListener('DOMContentLoaded', displayCartItems);
+    </script>
+
+</body>
+</html>
